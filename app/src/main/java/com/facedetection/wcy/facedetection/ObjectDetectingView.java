@@ -60,11 +60,14 @@ public class ObjectDetectingView extends BaseCameraView {
             Rect[] object = detector.detectObject(mGray, mObject);
             for (Rect rect : object) {
                 Imgproc.rectangle(mRgba, rect.tl(), rect.br(), detector.getRectColor(), 3);
-                Mat temp = new Mat(mRgba,rect);
-                Mat crop = new Mat();
-                temp.copyTo(crop);
+
+                Mat crop = new Mat(mRgba,rect);
+                Mat resize = new Mat();
+                org.opencv.core.Size sz = new org.opencv.core.Size(ImageClassifier.INPUT_SIZE,ImageClassifier.INPUT_SIZE);
+                Imgproc.resize(crop,resize,sz);
+
                 Bitmap bitmap = Bitmap.createBitmap(ImageClassifier.INPUT_SIZE,ImageClassifier.INPUT_SIZE,Bitmap.Config.ARGB_8888);
-                Utils.matToBitmap(crop,bitmap);//Todo:crash here
+                Utils.matToBitmap(resize,bitmap);
                 classifierResults = imageClassifier.recognizeImage(bitmap);
                 String resultString = new String("");
                 for (Recognition result : classifierResults) {
