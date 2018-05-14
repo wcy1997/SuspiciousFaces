@@ -7,6 +7,8 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.facedetection.wcy.facedetection.faceclassifier.ImageClassifier;
+
 import org.opencv.core.Scalar;
 
 public class ObjectDetectingActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
@@ -18,12 +20,15 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
     private ObjectDetector mLowerBodyDetector;
     private ObjectDetector mFullBodyDetector;
     private ObjectDetector mSmileDetector;
+    private ImageClassifier imageClassifier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_object_detecting);
+
+        imageClassifier = new ImageClassifier(this);
 
         ((RadioButton) findViewById(R.id.rb_face)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_eye)).setOnCheckedChangeListener(this);
@@ -33,6 +38,8 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
         ((RadioButton) findViewById(R.id.rb_smile)).setOnCheckedChangeListener(this);
 
         objectDetectingView = (ObjectDetectingView) findViewById(R.id.photograph_view);
+
+        objectDetectingView.setImageClassifier(imageClassifier);
 
         objectDetectingView.setOnOpenCVLoadListener(new OnOpenCVLoadListener() {
             //@Override
