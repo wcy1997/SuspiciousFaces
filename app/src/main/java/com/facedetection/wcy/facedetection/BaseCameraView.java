@@ -46,7 +46,7 @@ public abstract class BaseCameraView extends JavaCameraView implements LoaderCal
      */
     public boolean loadOpenCV(Context context) {
         // 初始化OpenCV
-        return OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_2_0, context, this);
+        return OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_2_0, context, this);//Todo why  320? not 341
     }
 
     @Override

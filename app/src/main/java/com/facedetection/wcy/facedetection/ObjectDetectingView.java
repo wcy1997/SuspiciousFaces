@@ -14,6 +14,7 @@ import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
+import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
@@ -55,6 +56,13 @@ public class ObjectDetectingView extends BaseCameraView {
         mRgba = inputFrame.rgba();
         mGray = inputFrame.gray();
 
+        /**
+         * Todo: fix buggy portrait view
+        Mat dst = mRgba.t();
+        Core.flip(mRgba.t(),dst,1);
+        Imgproc.resize(dst,dst,mRgba.size());
+        mRgba = dst;
+        */
         for (ObjectDetector detector : mObjectDetects) {
             // 检测目标
             Rect[] object = detector.detectObject(mGray, mObject);
@@ -63,17 +71,21 @@ public class ObjectDetectingView extends BaseCameraView {
 
                 Mat crop = new Mat(mRgba,rect);
                 Mat resize = new Mat();
-                org.opencv.core.Size sz = new org.opencv.core.Size(ImageClassifier.INPUT_SIZE,ImageClassifier.INPUT_SIZE);
+                org.opencv.core.Size sz = new org.opencv.core.Size(ImageClassifier.INPUT_SIZE,
+                        ImageClassifier.INPUT_SIZE);
                 Imgproc.resize(crop,resize,sz);
 
-                Bitmap bitmap = Bitmap.createBitmap(ImageClassifier.INPUT_SIZE,ImageClassifier.INPUT_SIZE,Bitmap.Config.ARGB_8888);
+                Bitmap bitmap = Bitmap.createBitmap(ImageClassifier.INPUT_SIZE,
+                        ImageClassifier.INPUT_SIZE,Bitmap.Config.ARGB_8888);
                 Utils.matToBitmap(resize,bitmap);
                 classifierResults = imageClassifier.recognizeImage(bitmap);
-                String resultString = new String("");
+                Point point = rect.tl();
+                double offset = 80;
                 for (Recognition result : classifierResults) {
-                    resultString = resultString + result.toString() + "\n";
+                    Imgproc.putText(mRgba,result.toString(), point, Core.FONT_HERSHEY_COMPLEX,
+                            2.5,new Scalar(0,255,255));
+                    point = new Point(point.x, point.y+offset);
                 }
-                Imgproc.putText(mRgba,resultString,rect.tl(), Core.FONT_HERSHEY_PLAIN,1.0,new Scalar(0,255,255));
             }
         }
         return mRgba;

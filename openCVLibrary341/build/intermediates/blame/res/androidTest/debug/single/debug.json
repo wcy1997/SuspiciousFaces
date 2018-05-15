@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_smile.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_smile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_lbpcascade_frontalface.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\lbpcascade_frontalface.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_fullbody.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_fullbody.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalface_alt2.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalface_alt2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalcatface.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalcatface.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_russian_plate_number.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_russian_plate_number.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_profileface.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_profileface.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_lowerbody.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_lowerbody.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalface_alt.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalface_alt.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_eye.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_licence_plate_rus_16stages.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_licence_plate_rus_16stages.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalface_alt_tree.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalface_alt_tree.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_righteye_2splits.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_righteye_2splits.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_lefteye_2splits.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_lefteye_2splits.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalface_default.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalface_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_upperbody.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_upperbody.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_eye_tree_eyeglasses.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_eye_tree_eyeglasses.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_haarcascade_frontalcatface_extended.xml.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\faceDetection\\openCVLibrary341\\build\\intermediates\\packaged_res\\debug\\raw\\haarcascade_frontalcatface_extended.xml"
+    }
+]
