@@ -19,7 +19,7 @@
         <!-- 目标检测Activity -->
         <activity
             android:name=".ObjectDetectingActivity"
-
+            android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
     </application>
 
