@@ -11,15 +11,18 @@ import com.facedetection.wcy.facedetection.faceclassifier.ImageClassifier;
 
 import org.opencv.core.Scalar;
 
-public class ObjectDetectingActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
+public class ObjectDetectingActivity extends BaseActivity {
 
     private ObjectDetectingView objectDetectingView;
     private ObjectDetector mFaceDetector;
+
+    /** unused
     private ObjectDetector mEyeDetector;
     private ObjectDetector mUpperBodyDetector;
     private ObjectDetector mLowerBodyDetector;
     private ObjectDetector mFullBodyDetector;
     private ObjectDetector mSmileDetector;
+     */
     private ImageClassifier imageClassifier;
 
     @Override
@@ -30,12 +33,16 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
 
         imageClassifier = new ImageClassifier(this);
 
+        /**
+
         ((RadioButton) findViewById(R.id.rb_face)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_eye)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_upper_body)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_lower_body)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_full_body)).setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.rb_smile)).setOnCheckedChangeListener(this);
+
+         */
 
         objectDetectingView = (ObjectDetectingView) findViewById(R.id.photograph_view);
 
@@ -46,12 +53,16 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
             public void onOpenCVLoadSuccess() {
                 Toast.makeText(getApplicationContext(), "OpenCV 加载成功", Toast.LENGTH_SHORT).show();
                 mFaceDetector = new ObjectDetector(getApplicationContext(), R.raw.lbpcascade_frontalface, 6, 0.2F, 0.2F, new Scalar(255, 0, 0, 255));
+                objectDetectingView.addDetector(mFaceDetector);
+                /**
                 mEyeDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_eye, 6, 0.1F, 0.1F, new Scalar(0, 255, 0, 255));
                 mUpperBodyDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_upperbody, 3, 0.3F, 0.4F, new Scalar(0, 0, 255, 255));
                 mLowerBodyDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_lowerbody, 3, 0.3F, 0.4F, new Scalar(255, 255, 0, 255));
                 mFullBodyDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_fullbody, 3, 0.3F, 0.5F, new Scalar(255, 0, 255, 255));
                 mSmileDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_smile, 10, 0.2F, 0.2F, new Scalar(0, 255, 255, 255));
-                findViewById(R.id.radio_group).setVisibility(View.VISIBLE);
+                */
+
+                //findViewById(R.id.radio_group).setVisibility(View.VISIBLE);
             }
 
             //@Override
@@ -77,6 +88,8 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
         objectDetectingView.swapCamera();
     }
 
+
+    /*
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         switch (buttonView.getId()) {
@@ -132,4 +145,5 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
         }
     }
+    */
 }
