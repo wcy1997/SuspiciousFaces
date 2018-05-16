@@ -52,7 +52,7 @@ public class ObjectDetectingActivity extends BaseActivity {
             //@Override
             public void onOpenCVLoadSuccess() {
                 Toast.makeText(getApplicationContext(), "OpenCV 加载成功", Toast.LENGTH_SHORT).show();
-                mFaceDetector = new ObjectDetector(getApplicationContext(), R.raw.lbpcascade_frontalface, 6, 0.2F, 0.2F, new Scalar(255, 0, 0, 255));
+                mFaceDetector = new ObjectDetector(getApplicationContext(), R.raw.lbpcascade_frontalface, 6, 0.03F, 0.03F, new Scalar(255, 0, 0, 255));
                 objectDetectingView.addDetector(mFaceDetector);
                 /**
                 mEyeDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_eye, 6, 0.1F, 0.1F, new Scalar(0, 255, 0, 255));
